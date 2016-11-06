@@ -1,0 +1,48 @@
+<div class="about" align="center">
+  <h2>About</h2>
+  <p>about the project, etc</p>
+
+  <div class="app-content">
+    BUTTONS
+    <md-card>
+      <button md-button>FLAT</button>
+      <button md-raised-button>RAISED</button>
+      <button md-icon-button>
+        <md-icon class="md-24">favorite</md-icon>
+      </button>
+      <button md-fab>
+        <md-icon class="md-24">add</md-icon>
+      </button>
+      <button md-mini-fab>
+        <md-icon class="md-24">add</md-icon>
+      </button>
+      <button md-raised-button color="primary">PRIMARY</button>
+      <button md-raised-button color="accent">ACCENT</button>
+      <button md-raised-button color="warn">WARN</button>
+      <button md-button disabled>OFF</button>
+      <button md-raised-button disabled>OFF</button>
+      <button md-mini-fab disabled><md-icon>check</md-icon></button>
+    </md-card>
+    TOOLBAR
+    <md-card>
+      <md-toolbar color="primary">
+          <span>Application Title |  More | Text</span>
+      </md-toolbar>
+    </md-card>
+    CHECKBOX
+    <md-card>
+      <md-checkbox [checked]="false" [indeterminate]="isIndeterminate" (change)="isIndeterminate = false">
+          Click the Button Below to Make Me Indeterminate.
+      </md-checkbox>
+      <button type="button" (click)="isIndeterminate = true">
+        Make Indeterminate
+      </button>
+    </md-card>
+    PROGRESS BAR
+    <md-card>
+      <md-progress-circle mode="indeterminate" color="primary"></md-progress-circle>
+      <md-progress-circle mode="indeterminate" color="accent"></md-progress-circle>
+      <md-progress-circle mode="indeterminate" color="warn"></md-progress-circle>
+    </md-card>
+</div>
+</div>

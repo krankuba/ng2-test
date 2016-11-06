@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <h1>{{title}}</h1>
+  <nav>
+    <a routerLink="/home" routerLinkActive="active">HOME</a>
+    <a routerLink="/about" routerLinkActive="active">ABOUT</a>
+    <a routerLink="/users" routerLinkActive="active">USERS</a>
+    <a *ngIf="!doMe()" routerLink="/login" routerLinkActive="active">LOGIN</a>
+    <a *ngIf="doMe()" routerLink="/home" routerLinkActive="active" (click)="logout()">LOGOUT</a>
+    <span *ngIf="doMe()">Logged in</span>
+    <span *ngIf="!doMe()">Not Logged in</span>
+  </nav>
+  <div class="col-sm-8 col-sm-offset-2">
+    <alert></alert>
+  </div>
+  <router-outlet></router-outlet>
+</div>
